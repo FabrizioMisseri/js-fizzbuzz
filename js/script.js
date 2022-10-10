@@ -14,37 +14,38 @@ const row = document.querySelector(".row");
 
 for (let i = 1; i <= 100; i++) {
     let background = "";
+    let testo;
 
     if (i % 3 == 0 && i % 5 == 0) {
         console.log(i, "fizzbuzz");
         background = "bg-fizzbuzz-color";
-        const cell = `<div class="col-2 ${background}">${"fizzbuzz"}</div>`;
-        row.innerHTML += cell;
-
+        testo = ("fizzbuzz")
     } else {
         if (i % 3 == 0) {
             console.log(i, "fizz");
             background = "bg-fizz-color";
-            const cell = `<div class="col-2 ${background}">${"fizz"}</div>`;
-            row.innerHTML += cell;
-
+            testo = ("fizz")
         }
         
         if (i % 5 == 0) {
             console.log(i, "buzz");
             background = "bg-buzz-color";
-            const cell = `<div class="col-2 ${background}">${"buzz"}</div>`;
-            row.innerHTML += cell;
-
+            testo = ("buzz")
         }
     }
 
     if (i % 3 != 0 && i % 5 != 0) {
         console.log(i);
-        background = "bg-primary-color"
-        const cell = `<div class="col-2 ${background}">${i}</div>`;
-        row.innerHTML += cell;
-
+        background = "bg-primary-color";
+        testo = i
     }
+    
+    const cell = document.createElement("div");
+    cell.classList.add("col-2");
+    cell.classList.add(background);
 
+    cell.innerHTML = testo;
+
+    row.append(cell);
 }
+
