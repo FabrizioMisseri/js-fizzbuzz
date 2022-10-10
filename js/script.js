@@ -40,12 +40,14 @@ for (let i = 1; i <= 100; i++) {
         testo = i
     }
     
-    const cell = document.createElement("div");
-    cell.classList.add("col-2");
-    cell.classList.add(background);
+    const col = document.createElement("div");
+    col.classList.add("col-2");
 
+    const cell = document.createElement("div");
+    cell.classList.add(background);
     cell.innerHTML = testo;
 
-    row.append(cell);
+    row.append(col);
+    col.append(cell);
 }
 
