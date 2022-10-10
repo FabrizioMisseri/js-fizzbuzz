@@ -10,22 +10,41 @@
     //                         per 5 scrivi "buzz"
     //                         per entrambi "fizzbuzz"
 
+const row = document.querySelector(".row");
 
 for (let i = 1; i <= 100; i++) {
-    
+    let background = "";
+
     if (i % 3 == 0 && i % 5 == 0) {
         console.log(i, "fizzbuzz");
+        background = "bg-fizzbuzz-color";
+        const cell = `<div class="col-2 ${background}">${"fizzbuzz"}</div>`;
+        row.innerHTML += cell;
+
     } else {
         if (i % 3 == 0) {
             console.log(i, "fizz");
+            background = "bg-fizz-color";
+            const cell = `<div class="col-2 ${background}">${"fizz"}</div>`;
+            row.innerHTML += cell;
+
         }
         
         if (i % 5 == 0) {
             console.log(i, "buzz");
+            background = "bg-buzz-color";
+            const cell = `<div class="col-2 ${background}">${"buzz"}</div>`;
+            row.innerHTML += cell;
+
         }
     }
 
     if (i % 3 != 0 && i % 5 != 0) {
         console.log(i);
+        background = "bg-primary-color"
+        const cell = `<div class="col-2 ${background}">${i}</div>`;
+        row.innerHTML += cell;
+
     }
+
 }
