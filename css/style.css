@@ -1,3 +1,5 @@
+/* RESET */
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -6,4 +8,54 @@
 
 html{
     font-size: 100%;
-} 
+}
+
+
+
+/* COMMON */
+
+body{
+    background-color: #083B4C;
+}
+
+.wrapper-container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+
+
+/* UTILITIES */
+
+
+.bg-primary-color{
+    background-color: #1389B2;
+}
+
+.bg-fizz-color{
+    background-color: #0BD6A1;
+}
+
+.bg-buzz-color{
+    background-color: #FFD166;
+}
+
+.bg-fizzbuzz-color{
+    background-color: #F0466F;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.size-3{
+    font-size: 3rem;
+}
+
+.text-light{
+    color: white;
+}
+
+
+
